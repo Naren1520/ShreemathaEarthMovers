@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -22,11 +23,14 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 border-b-2 border-yellow backdrop-blur-sm transition-all duration-300">
         <div className="container-custom flex items-center justify-between h-[72px]">
           <Link href="/" className="flex items-center gap-3 font-display cursor-pointer">
-            <div className="w-11 h-11 bg-yellow flex items-center justify-center">
-              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-black">
-                <path d="M2 22 L8 12 L14 18 L20 8 L30 22 Z" />
-                <rect x="2" y="23" width="28" height="4" rx="1" />
-              </svg>
+            <div className="w-12 h-12 flex-shrink-0 relative border-2 border-white rounded-sm">
+              <Image
+                src="/images/logo.jpeg"
+                alt="Shreematha Earthmovers Logo"
+                width={48}
+                height={48}
+                className="w-full h-full object-cover rounded-sm"
+              />
             </div>
             <div className="flex flex-col leading-[1.1]">
               <span className="text-[20px] font-extrabold text-white tracking-[0.5px] uppercase">

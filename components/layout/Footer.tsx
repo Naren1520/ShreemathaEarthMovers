@@ -1,19 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-[#141414] border-t-[3px] border-yellow pt-16 pb-8">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 border-2 border-yellow p-8 rounded-lg">
           
           <div className="flex flex-col">
             <div className="flex items-center gap-3 mb-5 font-display cursor-pointer">
-              <div className="w-11 h-11 bg-yellow flex items-center justify-center">
-                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 fill-black">
-                  <path d="M2 22 L8 12 L14 18 L20 8 L30 22 Z" />
-                  <rect x="2" y="23" width="28" height="4" rx="1" />
-                </svg>
+              <div className="w-12 h-12 flex-shrink-0 relative border-2 border-white rounded-sm">
+                <Image
+                  src="/images/logo.jpeg"
+                  alt="Shreematha Earthmovers Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-cover rounded-sm"
+                />
               </div>
               <div className="flex flex-col leading-[1.1]">
                 <span className="text-[20px] font-extrabold text-white tracking-[0.5px] uppercase">
@@ -84,7 +88,7 @@ export default function Footer() {
 
         </div>
         
-        <div className="mt-12 pt-6 border-t border-[#2a2a2a] flex justify-between items-center flex-wrap gap-4">
+        <div className="mt-8 pt-6 border-t border-yellow flex justify-between items-center flex-wrap gap-4">
           <div className="text-[13px] text-gray">
             © 2026 Shreematha Earthmovers. All rights reserved. | GST: 29XXXXX0000X1ZX
           </div>
