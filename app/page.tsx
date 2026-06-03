@@ -95,8 +95,8 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {[ 
-              { title: "Excavation", tags: ["Foundation", "Basement"], video: "/videos/vdo2.mp4" },
-              { title: "Land Leveling", tags: ["Grading", "Compaction"], video: "/videos/vdo3.mp4" },
+              { title: "Excavation", tags: ["Foundation", "Basement"], video: "/videos/vdo2.mp4", image: "/images/img1.jpg" },
+              { title: "Land Leveling", tags: ["Grading", "Compaction"], video: "/videos/vdo3.mp4", image: "/images/img2.jpg" },
               { title: "Demolition", tags: ["Structural", "Clearance"], image: "/images/img1.jpg" }
             ].map((service, i) => (
               <motion.div 
@@ -111,7 +111,14 @@ export default function Home() {
                 {service.video ? (
                   <video autoPlay loop muted playsInline className="w-full h-[250px] object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500" src={service.video} />
                 ) : (
-                  <img className="w-full h-[250px] object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500" src={service.image} alt={service.title} />
+                  <div className="relative w-full h-[250px]">
+                    <Image 
+                      src={service.image!} 
+                      alt={service.title}
+                      fill
+                      className="object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500"
+                    />
+                  </div>
                 )}
                 <div className="p-8 relative z-20 bg-gradient-to-t from-[#141414] via-[#141414]/90 to-transparent -mt-16 pt-20">
                   <div className="font-display text-[24px] font-extrabold uppercase mb-2 text-white group-hover:text-yellow transition-colors">{service.title}</div>
@@ -167,7 +174,14 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.2 + (i * 0.1) }}
                 className="bg-[#1e1e1e] border-y border-[#2a2a2a] overflow-hidden transition-all duration-500 hover:border-yellow group cursor-pointer hover:shadow-[0_10px_40px_rgba(250,204,21,0.1)] hover:-translate-y-2"
               >
-                <img className="w-full h-[250px] object-cover grayscale-[40%] transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-110" src={machine.img} alt={machine.title} />
+                <div className="relative w-full h-[250px]">
+                  <Image 
+                    src={machine.img} 
+                    alt={machine.title}
+                    fill
+                    className="object-cover grayscale-[40%] transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-110"
+                  />
+                </div>
                 <div className="p-8 relative z-10 bg-gradient-to-t from-[#1e1e1e] via-[#1e1e1e]/90 to-transparent -mt-16 pt-20">
                   <div className="font-display text-[26px] font-extrabold uppercase text-white mb-2 group-hover:text-yellow transition-colors">{machine.title}</div>
                   <span className="inline-block font-display text-[11px] font-bold tracking-[3px] bg-yellow/10 border border-yellow/20 text-yellow py-1.5 px-4 mb-4 rounded-sm">{machine.cap}</span>

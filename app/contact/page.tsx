@@ -26,11 +26,11 @@ export default function Contact() {
             <div className="divider"></div>
             <div className="mt-9">
               {[
-                { label: "Phone", val: <><a href="tel:+919876543210" className="hover:text-yellow">+91 98765 43210</a><br/><a href="tel:+919876543211" className="hover:text-yellow">+91 98765 43211</a></>, icon: <Phone className="text-black w-5 h-5" /> },
+                { label: "Phone", val: <><a href="tel:+919876543210" className="hover:text-yellow">+91 98765 43210</a><br/><a href="tel:919876543210" className="hover:text-yellow">+91 98765 43211</a></>, icon: <Phone className="text-black w-5 h-5" /> },
                 { label: "WhatsApp", val: <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="hover:text-yellow">+91 98765 43210</a>, icon: <Phone className="text-black w-5 h-5" /> }, // Simplified icon
-                { label: "Email", val: <a href="mailto:info@shreemathaearth.com" className="hover:text-yellow">info@shreemathaearth.com</a>, icon: <Mail className="text-black w-5 h-5" /> },
-                { label: "Address", val: <>No. 45, 3rd Cross, Peenya Industrial Area,<br/>Mangalore – 560058, Karnataka</>, icon: <MapPin className="text-black w-5 h-5" /> },
-                { label: "Working Hours", val: <>Mon – Sat: 7:00 AM – 8:00 PM<br/>Emergency: 24/7 Available</>, icon: <Clock className="text-black w-5 h-5" /> }
+                { label: "Email", val: <a href="mailto:shreemathaenterpises@gmail.com" className="hover:text-yellow">shreemathaenterpises@gmail.com</a>, icon: <Mail className="text-black w-5 h-5" /> },
+                { label: "Address", val: <>Shreematha Refreshments,Adyar<br/>Mangalore – 575007, Karnataka</>, icon: <MapPin className="text-black w-5 h-5" /> },
+                { label: "Working Hours", val: <>Mon – Sun: 7:00 AM – 10:30 PM<br/>Emergency: 24/7 Available</>, icon: <Clock className="text-black w-5 h-5" /> }
               ].map((info, idx) => (
                 <div key={idx} className="flex items-start gap-4 py-5 border-b border-[#2a2a2a] last:border-b-0">
                   <div className="w-12 h-12 bg-yellow flex items-center justify-center shrink-0">

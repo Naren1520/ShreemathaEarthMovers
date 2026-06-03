@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle2, Shield, Clock, DollarSign } from "lucide-react";
 
 export default function About() {
@@ -21,7 +22,15 @@ export default function About() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative">
-              <img className="w-full h-[500px] object-cover grayscale-[20%]" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Shreematha Earthmovers team" />
+              <div className="relative w-full h-[500px]">
+                <Image 
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" 
+                  alt="Shreematha Earthmovers team"
+                  fill
+                  priority
+                  className="object-cover grayscale-[20%]"
+                />
+              </div>
               <div className="absolute -bottom-6 -right-6 bg-yellow p-7 text-center">
                 <div className="font-display text-[56px] font-black text-black leading-none">10+</div>
                 <div className="font-display text-xs font-bold tracking-[2px] text-black/70 uppercase">Years in<br />Business</div>

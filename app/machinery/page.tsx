@@ -74,11 +74,14 @@ export default function Machinery() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {machines.map((machine, mIdx) => (
               <div key={mIdx} className="bg-[#141414] border border-[#2a2a2a] overflow-hidden group">
-                <img 
-                  src={`https://images.unsplash.com/photo-${machine.img}`} 
-                  alt={machine.title} 
-                  className="w-full h-[320px] object-cover grayscale-[20%] transition-all duration-400 group-hover:grayscale-0 group-hover:brightness-110" 
-                />
+                <div className="relative w-full h-[320px]">
+                  <Image 
+                    src={`https://images.unsplash.com/photo-${machine.img}`} 
+                    alt={machine.title}
+                    fill
+                    className="object-cover grayscale-[20%] transition-all duration-400 group-hover:grayscale-0 group-hover:brightness-110"
+                  />
+                </div>
                 <div className="p-8">
                   <div className="flex justify-between items-start flex-wrap gap-3 mb-4">
                     <div className="font-display text-[28px] font-black uppercase text-white leading-none whitespace-pre-wrap">{machine.title}</div>

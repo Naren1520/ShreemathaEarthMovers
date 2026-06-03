@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Barlow } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import GlobalElements from "@/components/layout/GlobalElements";
@@ -37,6 +38,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <GlobalElements />
+        <Analytics />
       </body>
     </html>
   );

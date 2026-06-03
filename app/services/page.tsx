@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Services() {
   return (
@@ -20,7 +21,15 @@ export default function Services() {
         <div className="container-custom">
           {/* Service 1 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20 group">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Excavation" className="w-full h-[400px] object-cover grayscale-[20%]" />
+            <div className="relative w-full h-[400px]">
+              <Image 
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" 
+                alt="Excavation"
+                fill
+                priority
+                className="object-cover grayscale-[20%]"
+              />
+            </div>
             <div>
               <span className="tag">Service 01</span>
               <h2 className="section-title !text-[clamp(32px,4vw,52px)]">Excavation</h2>
@@ -65,12 +74,26 @@ export default function Services() {
               </div>
               <button className="btn btn-yellow mt-8">Get Quote For This Service</button>
             </div>
-            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="Land Leveling" className="w-full h-[400px] object-cover grayscale-[20%] order-1 md:order-2" />
+            <div className="relative w-full h-[400px] order-1 md:order-2">
+              <Image 
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" 
+                alt="Land Leveling"
+                fill
+                className="object-cover grayscale-[20%]"
+              />
+            </div>
           </div>
 
           {/* Service 3 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20 group">
-            <img src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=800&q=80" alt="Demolition" className="w-full h-[400px] object-cover grayscale-[20%]" />
+            <div className="relative w-full h-[400px]">
+              <Image 
+                src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=800&q=80" 
+                alt="Demolition"
+                fill
+                className="object-cover grayscale-[20%]"
+              />
+            </div>
             <div>
               <span className="tag">Service 03</span>
               <h2 className="section-title !text-[clamp(32px,4vw,52px)]">Demolition</h2>
@@ -96,7 +119,14 @@ export default function Services() {
           {/* Services 4 & 5 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
             <div className="bg-[#141414] border border-[#2a2a2a] relative overflow-hidden group transition-all hover:border-yellow hover:-translate-y-1">
-              <img className="w-full h-[200px] object-cover grayscale-[20%]" src="https://images.unsplash.com/photo-1620905485547-caee9a5e14cd?w=600&q=70" alt="Site Clearing" />
+              <div className="relative w-full h-[200px]">
+                <Image 
+                  src="https://images.unsplash.com/photo-1620905485547-caee9a5e14cd?w=600&q=70" 
+                  alt="Site Clearing"
+                  fill
+                  className="object-cover grayscale-[20%]"
+                />
+              </div>
               <div className="p-7">
                 <span className="tag">Service 04</span>
                 <div className="font-display text-[22px] font-extrabold uppercase mt-3 mb-3 text-white">Site Clearing</div>
@@ -113,7 +143,14 @@ export default function Services() {
             </div>
             
             <div className="bg-[#141414] border border-[#2a2a2a] relative overflow-hidden group transition-all hover:border-yellow hover:-translate-y-1">
-              <img className="w-full h-[200px] object-cover grayscale-[20%]" src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=70" alt="Road Work" />
+              <div className="relative w-full h-[200px]">
+                <Image 
+                  src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=70" 
+                  alt="Road Work"
+                  fill
+                  className="object-cover grayscale-[20%]"
+                />
+              </div>
               <div className="p-7">
                 <span className="tag">Service 05</span>
                 <div className="font-display text-[22px] font-extrabold uppercase mt-3 mb-3 text-white">Road Work</div>

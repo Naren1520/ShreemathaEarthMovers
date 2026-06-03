@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Projects() {
   const [filter, setFilter] = useState("all");
@@ -58,10 +59,11 @@ export default function Projects() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-[240px] gap-4">
             {projects.filter(p => filter === "all" || p.cat === filter).map((project, idx) => (
               <div key={idx} className={`relative overflow-hidden cursor-pointer group ${project.large ? 'md:col-span-2 md:row-span-2' : ''}`}>
-                <img 
+                <Image 
                   src={`https://images.unsplash.com/photo-${project.img}`} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover grayscale-[20%] transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0"
+                  alt={project.title}
+                  fill
+                  className="object-cover grayscale-[20%] transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0"
                 />
                 <div className="absolute inset-0 bg-black/0 transition-all duration-300 flex flex-col justify-end p-6 group-hover:bg-black/75">
                   <div className="translate-y-5 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
