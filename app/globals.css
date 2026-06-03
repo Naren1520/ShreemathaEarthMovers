@@ -43,16 +43,11 @@
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 clamp(16px, 4vw, 40px);
   }
 
   .section {
-    padding: 96px 0;
-  }
-  @media (max-width: 600px) {
-    .section {
-      padding: 64px 0;
-    }
+    padding: clamp(48px, 12vw, 96px) 0;
   }
 
   .tag {
@@ -68,11 +63,11 @@
   }
 
   .section-sub {
-    @apply text-[17px] text-[#d4d4d4] max-w-[560px] mt-4 font-light;
+    @apply text-[clamp(14px,2.5vw,17px)] text-[#d4d4d4] max-w-[560px] mt-4 font-light;
   }
 
   .btn {
-    @apply inline-flex items-center gap-[10px] py-[14px] px-[32px] font-display text-base font-bold tracking-[1.5px] uppercase border-none cursor-pointer transition-all duration-200;
+    @apply inline-flex items-center gap-[10px] py-[clamp(10px,2vw,14px)] px-[clamp(20px,4vw,32px)] font-display text-[clamp(12px,2vw,16px)] font-bold tracking-[1.5px] uppercase border-none cursor-pointer transition-all duration-200;
   }
 
   .btn-yellow {
@@ -114,6 +109,14 @@
   }
   .animate-scrollx:hover {
     animation-play-state: paused;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }
 
