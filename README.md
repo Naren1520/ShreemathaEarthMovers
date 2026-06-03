@@ -1,36 +1,200 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shreematha Earthmovers
 
-## Getting Started
+A modern and responsive web application built with Next.js 16 for showcasing earthmoving, construction, and infrastructure services. The platform is optimized for performance, SEO, and user experience using the App Router architecture, Tailwind CSS, and Vercel Analytics.
 
-First, run the development server:
+---
+
+##  Tech Stack
+
+* Next.js 16 (App Router)
+* React 19
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* Swiper.js
+* Lucide React Icons
+* Vercel Analytics
+
+---
+
+##  Features
+
+* Modern responsive design
+* Fast static page generation
+* SEO-friendly architecture
+* Optimized image delivery with `next/image`
+* Lazy loading for media assets
+* Interactive animations using Framer Motion
+* Mobile-first navigation
+* Analytics integration with Vercel
+* Scalable component-based structure
+
+---
+
+##  Project Structure
+
+```text
+Shreematha-Earthmovers/
+│
+├── app/
+│   ├── about/
+│   │   └── page.tsx
+│   ├── contact/
+│   │   └── page.tsx
+│   ├── machinery/
+│   │   └── page.tsx
+│   ├── projects/
+│   │   └── page.tsx
+│   ├── services/
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   └── GlobalElements.tsx
+│   │
+│   ├── sections/
+│   │   ├── HeroSection.tsx
+│   │   ├── ServicesSection.tsx
+│   │   ├── MachinerySection.tsx
+│   │   ├── ProjectsSection.tsx
+│   │   └── ContactSection.tsx
+│   │
+│   └── ui/
+│       ├── StatsSection.tsx
+│       ├── Button.tsx
+│       ├── Card.tsx
+│       └── Loader.tsx
+│
+├── public/
+│   ├── images/
+│   │   ├── hero/
+│   │   ├── machinery/
+│   │   ├── projects/
+│   │   └── gallery/
+│   │
+│   ├── videos/
+│   │   ├── vdo2.mp4
+│   │   └── vdo3.mp4
+│   │
+│   └── favicon.ico
+│
+├── lib/
+│   ├── constants.ts
+│   ├── data.ts
+│   └── utils.ts
+│
+├── hooks/
+│   └── useScrollAnimation.ts
+│
+├── types/
+│   └── index.ts
+│
+├── next.config.ts
+├── eslint.config.mjs
+├── postcss.config.mjs
+├── tsconfig.json
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+---
+
+##  Installation
+
+Clone the repository and install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+##  Development
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Application will be available at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+##  Production Build
 
-To learn more about Next.js, take a look at the following resources:
+Create an optimized production build:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run the production server:
 
-## Deploy on Vercel
+```bash
+npm run start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📜 Available Scripts
+
+| Command       | Description               |
+| ------------- | ------------------------- |
+| npm run dev   | Start development server  |
+| npm run build | Generate production build |
+| npm run start | Start production server   |
+| npm run lint  | Run ESLint checks         |
+
+---
+
+##  Performance Optimizations
+
+* Static Site Generation (SSG)
+* Automatic code splitting
+* Optimized image loading
+* Lazy-loaded assets
+* Tailwind CSS optimization
+* Vercel Analytics integration
+* SEO-friendly routing structure
+
+---
+
+##  Deployment
+
+The project can be deployed on:
+
+* Vercel (Recommended)
+* Netlify
+* AWS Amplify
+* DigitalOcean App Platform
+* Any platform supporting Next.js
+
+Before deployment:
+
+* Configure environment variables if required
+* Verify image domains in `next.config.ts`
+* Optimize large media files
+* Enable CDN caching for static assets
+
+---
+
+##  Author
+
+**Naren S J**
+
+---
+
+##  License
+
+This project is developed for Shreematha Earthmovers and is intended for business and portfolio use.
